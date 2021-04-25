@@ -3,12 +3,14 @@ package DomainDesignEnImplementatie;
 public class Golf {
     public int hoeveelheid;
     public int lagen;
-    public double tijd;
+    public int tijd;
+    public int opbrengst;
 
-    public Golf(int hoeveelheid, int lagen, int tijd) {
+    public Golf(int hoeveelheid, int lagen, int tijd, int opbrengst) {
         this.hoeveelheid = hoeveelheid;
         this.lagen = lagen;
         this.tijd = tijd;
+        this.opbrengst = opbrengst;
     }
 
     @Override
