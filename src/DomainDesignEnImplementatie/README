@@ -1,0 +1,10 @@
+Voor de opdracht Domain Design & Implementatie heb ik de applicatie Bloons td Battles gekozen.
+In deze app kan je tegen andere mensen battlen door zo lang mogelijk te overleven van de ballonnen.
+Elke ronde worden er ballonnen gestuurd en dan kan jij als speler aapjes plaatsten die de ballonnen poppen.
+
+Ik heb gekozen voor de domeinen Speler, Golf, 
+de interface Toren waaronder je DartMonkey, NinjaMonkey en BoomerangMonkey hebt.
+
+De functionaliteiten zijn dat je golven van ballonnen kan laten sturen.
+ook kan de speler aapjes kopen en plaatsten. 
+Als de "popPower" lager is dan het aantal ballonnen gaat het van de spelers leven af tot dat die bij 0 verliest.
