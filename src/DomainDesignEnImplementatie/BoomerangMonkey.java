@@ -1,8 +1,8 @@
 package DomainDesignEnImplementatie;
 
-public class DartMonkey implements Toren {
-    final int monkeyPower = 10;
-    int prijs = 150;
+public class BoomerangMonkey implements Toren {
+    final int monkeyPower = 20;
+    int prijs = 350;
 
     public void KoopToren() {
         Speler.geld -= prijs;
@@ -16,7 +16,7 @@ public class DartMonkey implements Toren {
 
     @Override
     public String toString() {
-        return "DartMonkey{" +
+        return "BoomerangMonkey{" +
                 "monkeyPower=" + monkeyPower +
                 ", prijs=" + prijs +
                 '}';

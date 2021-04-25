@@ -1,6 +1,6 @@
 package DomainDesignEnImplementatie;
 
 public interface Toren {
-    public void increasePopPower();
-    public void UpgradeMonkey();
+    public void KoopToren();
+    public void VerkoopToren();
 }
