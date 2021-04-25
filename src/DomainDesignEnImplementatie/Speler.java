@@ -12,7 +12,8 @@ public class Speler {
     }
 
     public int getLevens() {
-        return levens;
+        if (levens <= 0){System.out.println("GameOver");}
+            return levens;
     }
 
     public void setLevens(int levens) {
@@ -21,10 +22,6 @@ public class Speler {
 
     public double getPopPower() {
         return popPower;
-    }
-
-    public void setPopPower(int popPower) {
-        this.popPower = popPower;
     }
 
     public int getGeld() {
@@ -40,24 +37,32 @@ public class Speler {
         return "Speler:" + naam + '\'' +
                 ", levens=" + levens +
                 ", geld=" + geld +
-                ", popPower=" + popPower;
+                ", popPower=" + popPower + "\n";
     }
 
     public static void main(String[] args) {
         // Voor het tonen van de functionaliteit simuleer ik een kort potjes tussen mij en mijn broertje.
-        // Maak de spelers aan.
+        // Eerst maak ik de spelers aan voor mij en mijn broertje.
         Speler s1 = new Speler("Luuk");
-        Speler s2 = new Speler("Ivo");
 
+        // Maak de object voor de golf en aapjes aan.
         Golf g1 =  new Golf(15);
         DartMonkey d1 = new DartMonkey();
         NinjaMonkey n1 = new NinjaMonkey();
+        BoomerangMonkey b1 = new BoomerangMonkey();
 
         System.out.println(g1.toString());
+
         System.out.println(s1.toString());
-        if(s1.geld > d1.prijs){d1.KoopToren();}
+
+        //Koop torens ter verdediging.
+        if(s1.getGeld() > d1.prijs){d1.KoopToren();}
+
+        //Bereken de schade.
         if(g1.hoeveelheid > s1.getPopPower()){
             s1.setLevens((int) (s1.levens - (g1.hoeveelheid - s1.getPopPower())));}
+
+        // print de variable wanneer de golf voorbij is.
         System.out.println(s1.toString());
     }
 }
