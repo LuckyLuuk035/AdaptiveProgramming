@@ -3,10 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void f(String input, List<Node> nodeList){
+    public static List<Node> f(String input, List<Node> nodeList){
         for(char ch : input.toCharArray()) {
-            
+            nodeList.add(nodeList.get(nodeList.size()-1).getNext(ch));
         }
+        return nodeList;
     }
 
     public static void main(String[] args) {
@@ -32,7 +33,7 @@ public class Main {
         List<Node> nodeList = new ArrayList<>();
         nodeList.add(s0);
 
-        f("BBBA", nodeList);
+        System.out.println(f("BBBA", nodeList));
     }
 }
 
