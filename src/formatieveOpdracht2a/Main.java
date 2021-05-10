@@ -3,11 +3,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static List<Node> f(String input, List<Node> nodeList){
-        for(char ch : input.toCharArray()) {
-            nodeList.add(nodeList.get(nodeList.size()-1).getNext(ch));
+    public static List<String> f(String input, List<Node> nodeList){
+        for(char ch : input.toCharArray()) { nodeList.add(nodeList.get(nodeList.size()-1).getNext(ch));
         }
-        return nodeList;
+        List<String> path = new ArrayList<>();
+        for(Node nd : nodeList) { path.add(nd.name);
+        }
+        return path;
     }
 
     public static void main(String[] args) {

@@ -20,10 +20,10 @@ public class Node {
 
     public Node getNext(char next) {
         if (next == 'A') {
-            System.out.println(aPath.name);
+            //System.out.println(aPath.name);
             return aPath;}
         else if (next == 'B') {
-            System.out.println(bPath.name);
+            //System.out.println(bPath.name);
             return bPath;}
         return null;
     }
