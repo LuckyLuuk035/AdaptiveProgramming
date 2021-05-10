@@ -1,13 +1,17 @@
 package formatieveOpdracht2a;
 
 public class Node {
-    String name;
-    Node aPath;
-    Node bPath;
+    private String name;
+    private Node aPath;
+    private Node bPath;
 
 
-    public Node(String name){
+    public Node(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setAPath(Node aPath) {
@@ -19,12 +23,16 @@ public class Node {
     }
 
     public Node getNext(char next) {
-        if (next == 'A') {
-            //System.out.println(aPath.name);
-            return aPath;}
-        else if (next == 'B') {
-            //System.out.println(bPath.name);
-            return bPath;}
+        if (this.aPath != null) {
+            if (next == 'A') {
+                return aPath;
+            }
+        }
+        if (this.bPath != null) {
+            if (next == 'B') {
+                return bPath;
+            }
+        }
         return null;
     }
 }
